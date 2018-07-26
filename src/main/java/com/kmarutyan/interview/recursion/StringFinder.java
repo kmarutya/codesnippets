@@ -6,7 +6,7 @@ package com.kmarutyan.interview.recursion;
 public class StringFinder {
     public static boolean findString(String longStr, String strToFind ){
         if(longStr == null || strToFind == null) return false;
-        if(longStr.length() < strToFind.toString().length()) return false;
+        if(longStr.length() < strToFind.length()) return false;
 
         if( longStr.substring(0, strToFind.length()).equals(strToFind)){
             return true;

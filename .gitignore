@@ -1,3 +1,10 @@
 **/out
 **/build
 **/.idea
+.vscode
+**.iml
+.gradle
+.classpath
+.project
+.settings/
+bin/

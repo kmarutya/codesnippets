@@ -1,7 +1,6 @@
 package com.kmarutyan.interview.misc;
 
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.*;
 
 /**
  * Created by apple on 6/7/18.
@@ -20,6 +19,8 @@ public class ReverseNumber {
 
     }
     public static void main(String [] args){
+
+        List<Integer> sumList = new ArrayList(1000);
 
         Collection<Integer> ints = Arrays.asList(1356, 84838,33494,34348 );
         for(int i: ints){

@@ -4,6 +4,9 @@ import java.util.*;
  * Created by apple on 8/19/17.
  */
 public class TypeTest {
+    public static void print(String arg) {
+        System.out.println(arg);
+    }
 
     public static void main(String []args){
         List<Integer> mergerList = new ArrayList<>();
