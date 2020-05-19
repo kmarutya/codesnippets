@@ -14,20 +14,26 @@ public class StockSellMax {
         memoization[1] = Math.max(0, data[1]- data[0]);
     }
 
-    public  int maxProfit(int [] prices, int pos){
-        if(memoization[pos] >= 0)
-            return memoization[pos];
+    public static int maxProfit(int [] prices){
+        return maxProfit(prices, 0,prices.length -1);
+    }
 
+    public static int maxProfit(int [] prices, int start, int end){
+        int profit = 0;
+        if (end <= start)
+            return 0;
 
+        for(int i = start; i < end; i++){
+            for(int j =  i+1; j <= end; j++){
+                int delta = prices[j] - prices[i];
+                if( delta > 0){
+                    int curProfit = delta + maxProfit(prices, start, i-1 ) + maxProfit(prices, j+1, end);
+                    profit = Math.max(profit, curProfit);
+                }
+            }
+        }
 
-        int prA = maxProfit(prices, pos - 2);
-        int prB = prA +  prices[pos] - prices[pos - 1];
-
-
-        // placeholder to keep compiler happy
-        return -1;
-
-
+        return profit;
     }
 
     public  int stockBuySell(int [] prices){
@@ -86,6 +92,7 @@ public class StockSellMax {
         int n = price.length;
 //        System.out.println(new StockSellMax(price).maxProfit(price, price.length -1));
         System.out.println(new StockSellMax(price).stockBuySell(price));
+        System.out.println(maxProfit(price));
 
     }
 
