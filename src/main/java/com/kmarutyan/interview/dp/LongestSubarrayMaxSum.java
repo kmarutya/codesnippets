@@ -23,8 +23,12 @@ public class LongestSubarrayMaxSum {
 
     }
 
+
+
     public static void main(String [] args){
         int[] arr = {-2, -3, 4, -1, -2, 1, 5, -3};
         System.out.println(longestSubarray(arr));
+        System.out.println(longestSubarray(new int [] {-2, -3, 4, -1, -2, 1, 5, -3, 4}));
+
     }
 }
