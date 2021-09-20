@@ -35,8 +35,10 @@ public class Unique {
     }
 
 
+
+
     public static void main(String ... args){
         String [] str = new String []{ "adkld", "sks", "aldoiuy"};
-        Arrays.stream(str).forEach(s -> System.out.println(String.format("String %s has only unique characters: %s" ,s,isUnique(s))));
+        Arrays.stream(str).forEach(s -> System.out.printf("String '%s' has only unique characters: %s\n" ,s,isUnique(s)));
     }
 }
