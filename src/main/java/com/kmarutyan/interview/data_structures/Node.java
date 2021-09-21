@@ -132,6 +132,7 @@ public class Node implements Comparable<Integer>{
         // list.stream().forEach(l-> System.out.println(l));
         // System.out.println("\n\nPrint reversed list");
         //  reverseList(list).forEach(l-> System.out.println(l));
+
         int [] arr = new int[]{34,4,3,1,5,5,6,95,5,3,33,93};
         System.out.println(arrayToSLinkedList(arr));
         System.out.println(removeDupes(arrayToSLinkedList(arr)));
